@@ -46,19 +46,21 @@ main{
 form{
   margin:20px;
 }
-
+#borderimg {
+  border-image: url(border.png) 30 round;
+}
 
 .helloworld{
-  background-color: pink;
-  color:blueviolet;
+  background-color:firebrick;
+  color: white;
 }
 #interests{
-  background-color:gold;
-  color: green;
+  background-color: gainsboro;
+  color: black;
 }
 #places{
-  background-color: cadetblue;
-  color: azure;
+  background-color: lightcoral;
+  color:white;
 }
 
 thead{

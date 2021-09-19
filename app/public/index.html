@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
      <div class = "container-fluid">
@@ -16,7 +17,7 @@
    <h1>&nbsp;&nbsp;&nbsp;<img src = "images/four_circles.png" height="110px">Four Circles Racing Events</h1>
      </div> 
    </header> -->
-    <div class = "row">
+    <div id="offerApp" class = "row">
 <nav class="mynav">
       <div class="navbar-header">
         <button class="navbar-toggle" data-toggle="collapse" data-target="#MyMenu">
@@ -37,7 +38,7 @@
      <div class = "row helloworld">
        <div class = "col-lg-9 col-md-9 col-sm-12 col-xs-12">
           <div class = "col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <a href="https://randomuser.me/api/portraits/women/48.jpg"><img src = "img/cas.jpeg" class="img-responsive"></a>
+            <a v-bind:href="person.picture.large"><img v-bind:src = "person.picture.large" class="borderimg"></a>
           </div>
     <p> Hello World! Welcome to my website. I resonate with the following quote and it pretty much sums up my belief.
     </p>  
@@ -111,7 +112,7 @@
   </div>
 </div>  
    </main>
-
+   <script src="js/index.js"></script>
    <div class = "row">
 <footer> 
 Cassandra Hale | Phone: (325)-325-3488 | 7797 Lovers Ln</footer>

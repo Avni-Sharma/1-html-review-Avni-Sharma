@@ -32,6 +32,7 @@ footer{
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 
@@ -46,8 +47,10 @@ main{
 form{
   margin:20px;
 }
-#borderimg {
-  border-image: url(border.png) 30 round;
+.borderimg {
+  /* border-image: url(border.png) 30 round; */
+  margin: auto;
+  border-radius: 50%;
 }
 
 .helloworld{

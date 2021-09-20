@@ -5,23 +5,35 @@ const Offer = {
         "person": {},
         }
     },
-    created() {
-        console.log("A");
-        fetch('https://randomuser.me/api/')
-        .then( response => response.json() )
-        .then( (responseJson) => {
-            console.log(responseJson);
-            console.log("C");
-            this.person = responseJson.results[0];
-            d = new Date(this.person.dob.date)
-            this.person.dob.formatted_date = d.toISOString().substring(0, 10)
-            console.log("####### ",this.person.picture.large)
+    computed: {
+        prettyBirthday() {
+            return dayjs(this.person.dob.date)
+            .format('D MMM YYYY')
+        }
+    },
+    methods: {
+        fetchUserData(){
+            console.log("A");
+            fetch('https://randomuser.me/api/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                console.log("C");
+                this.person = responseJson.results[0];
+                d = new Date(this.person.dob.date)
+                this.person.dob.formatted_date = d.toISOString().substring(0, 10)
+                console.log("####### ",this.person.picture.large)
+    
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
+            console.log("B");
 
-        })
-        .catch( (err) => {
-            console.error(err);
-        })
-        console.log("B");
+        }
+    },
+    created() {
+        this.fetchUserData();
     } //end created
 } // end Offer config
 Vue.createApp(Offer).mount('#offerApp');

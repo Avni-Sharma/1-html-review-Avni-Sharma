@@ -8,6 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/vue@next"></script>
+    <!-- CDN example (unpkg) -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
+
   </head>
   <body>
      <div class = "container-fluid">
@@ -46,12 +50,15 @@
   <ul> 
   <li>Name : {{ person.name.first }} {{ person.name.last }}</li>
   <li> Country : {{ person.location.country }}</li>
-  <li>Birth date : {{ person.dob.formatted_date }}</li>
+  <li> Birth date : {{ prettyBirthday }}</li>
+  <!-- <li>Birth date : {{ person.dob.formatted_date }}</li> -->
   <li>Age : {{ person.registered.age }}</li>
   <li><label>Email: </label>
        <a href="mailto:'+person.email" target="_blank">{{ person.email }}</a></li>
    </ul>
-  
+   <!-- <form v-on:onsubmit.prevent="fetchUserData">
+    <button type="submit">Refresh</button>
+  </form> -->
     </div>
   </div>
 

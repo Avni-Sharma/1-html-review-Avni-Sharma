@@ -44,7 +44,7 @@
   
   
   </div>
-  <div class = "row">
+  <div v-if="person" class = "row">
     <div  class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id="interests">   
   <h3>{{ person.name.first }} Information </h3> 
   <ul> 
@@ -56,9 +56,9 @@
   <li><label>Email: </label>
        <a href="mailto:'+person.email" target="_blank">{{ person.email }}</a></li>
    </ul>
-   <!-- <form v-on:submit.prevent="fetchUserData">
+   <form v-on:submit.prevent="fetchUserData">
     <button type="submit">Refresh</button>
-  </form> -->
+  </form>
     </div>
   </div>
 

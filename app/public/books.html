@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
 
 <body>
-  <div class = "container-fluid">
+  <div id="offerApp" class = "container-fluid">
     <div class = "row">
       <nav class="mynav">
         <div class="navbar-header">
@@ -35,61 +36,21 @@
         <tr>
           <th class="text-center">Title</th>	
           <th class="text-center">Author</th>	
-          <th class="text-center">Year Published</th>
+          <th class="text-center">Year_Published</th>
           <th class="text-center">Publisher</th>
-          <th class="text-center">Page Count</th>
+          <th class="text-center">Page_Count</th>
           <th class="text-center">MSRP</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="text-center">Fundamentals of Wavelets</td>	
-          <td class="text-center">Goswami, Jaideva</td>
-          <td class="text-center">1960</td>
-          <td class="text-center">Wiley</td>
-          <td class="text-center">244</td>
-          <td class="text-center">100</td>
-        </tr>
-        <tr>
-          <td class="text-center">Data Smart</td>	
-          <td class="text-center">Foreman, John</td>
-          <td class="text-center">1978</td>
-          <td class="text-center">Wiley</td>
-          <td class="text-center">267</td>
-          <td class="text-center">103</td>
-        </tr>
-        <tr>
-          <td class="text-center">Fundamentals of Wavelets</td>	
-          <td class="text-center">Goswami, Jaideva</td>
-          <td class="text-center">1960</td>
-          <td class="text-center">Wiley</td>
-          <td class="text-center">244</td>
-          <td class="text-center">100</td>
-        </tr>
-        <tr>
-          <td class="text-center">God Created the Integers</td>	
-          <td class="text-center">Hawking, Stephen</td>
-          <td class="text-center">1950</td>
-          <td class="text-center">Penguin</td>
-          <td class="text-center">197</td>
-          <td class="text-center">75</td>
-        </tr>
-        <tr>
-          <td class="text-center">Fundamentals of Wavelets</td>	
-          <td class="text-center">Goswami, Jaideva</td>
-          <td class="text-center">1960</td>
-          <td class="text-center">Wiley</td>
-          <td class="text-center">244</td>
-          <td class="text-center">100</td>
-        </tr>
-        <tr>
-          <td class="text-center">Data Scientists at Work</td>	
-          <td class="text-center">Sebastian Gutierrez</td>
-          <td class="text-center">1947</td>
-          <td class="text-center">Apress</td>
-          <td class="text-center">230</td>
-          <td class="text-center">65</td>
-        </tr>
+          <tr v-for="book in books">
+            <td>{{ book.Title }}</td> 
+            <td>{{ book.Author }}</td> 
+            <td>{{ book.Year_Published }}</td> 
+            <td>{{ book.Publisher }}</td> 
+            <td>{{ book.Page_Count }}</td> 
+            <td>{{ book.MSRP }}</td>
+          </tr>
 
       </tbody>
     </table>
@@ -124,7 +85,7 @@
   <button type="submit" class="btn btn-primary">Submit</button><br><br><br>
 </form>
 </main>
-
+<script src="js/index.js"></script>
    <div class = "row">
 <footer> 
 Cassandra Hale | Phone: (325)-325-3488 | 7797 Lovers Ln</footer>

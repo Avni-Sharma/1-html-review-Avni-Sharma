@@ -3,6 +3,7 @@ const Offer = {
     data() {
       return {
         "person": undefined,
+        "books":[]
         }
     },
     computed: {
@@ -30,10 +31,25 @@ const Offer = {
             })
             console.log("B");
 
+        },
+        fetchBookData(){
+            fetch('/api/books/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.books = responseJson;
+                console.log(this.books);
+                console.log(books);
+            })
+            .catch( (err) => {
+                console.log(this.books);
+                console.error(err);
+            })
         }
     },
     created() {
         this.fetchUserData();
+        this.fetchBookData();
     } //end created
 } // end Offer config
 Vue.createApp(Offer).mount('#offerApp');

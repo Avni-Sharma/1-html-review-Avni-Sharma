@@ -60,7 +60,7 @@
   <script>
     new Tablesort(document.getElementById('bookTable'));
   </script>
-<form>
+
 
       <header>
       Form
@@ -68,24 +68,26 @@
     
      <h4>Input fields to be entered as a row in the table</h4><br>
     <!-- Title,Author,Year Published,Publisher,Page Count,MSRP -->
-  <div class="form-group">
+  <form v-on:submit.prevent="postNewBook">
+    <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Enter Title"><br>
+    <input type="text" v-model="booksForm.Title" class="form-control" id="title" placeholder="Enter Title"><br>
     <label for="author">Author</label>
-    <input type="text" class="form-control" id="author" placeholder="Enter Author"><br>
+    <input type="text" v-model="booksForm.Author" class="form-control" id="author" placeholder="Enter Author"><br>
     <label for="year">Year Published</label>
-    <input type="text" class="form-control" id="year" placeholder="Enter Year"><br>
+    <input type="text" v-model="booksForm.Year_Published" class="form-control" id="year" placeholder="Enter Year"><br>
     <label for="year">Publisher</label>
-    <input type="text" class="form-control" id="publisher" placeholder="Enter Publisher"><br>
+    <input type="text" v-model="booksForm.Publisher" class="form-control" id="publisher" placeholder="Enter Publisher"><br>
     <label for="year">Page Count</label>
-    <input type="text" class="form-control" id="pagecount" placeholder="Enter Page Count"><br>
+    <input type="text" v-model="booksForm.Page_Count" class="form-control" id="pagecount" placeholder="Enter Page Count"><br>
     <label for="year">MSRP</label>
-    <input type="text" class="form-control" id="msrp" placeholder="Enter MSRP">
+    <input type="text" v-model="booksForm.MSRP" class="form-control" id="msrp" placeholder="Enter MSRP">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button><br><br><br>
 </form>
-</main>
 <script src="js/index.js"></script>
+</main>
+
    <div class = "row">
 <footer> 
 Cassandra Hale | Phone: (325)-325-3488 | 7797 Lovers Ln</footer>

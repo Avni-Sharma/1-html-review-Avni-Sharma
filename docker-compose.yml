@@ -1,9 +1,9 @@
 version: "3"
 services:
-  msis-salary:
+  msis-hw-app:
     build: .
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./app/public:/srv/app/public
     env_file:

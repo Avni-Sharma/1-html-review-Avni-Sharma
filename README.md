@@ -2,7 +2,11 @@
 
 Refer  links
 https://docs.microsoft.com/en-us/azure/app-service/quickstart-custom-container?pivots=container-linux&tabs=dotnet
+
 https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest#az_acr_login
+
 https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr?tabs=azure-cli
+
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli
+
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-faq

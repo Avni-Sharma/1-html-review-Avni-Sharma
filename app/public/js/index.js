@@ -69,7 +69,9 @@ const Offer = {
     // Update book
       postBook(evt) {
             console.log ("Test:", this.selectedBook);
+            console.log("######", this.booksForm);
             if (this.selectedBook) {
+                console.log("######", this.booksForm);
                 this.postEditBook(evt);
             } else {
                 this.postNewBook(evt);
@@ -79,7 +81,7 @@ const Offer = {
     postEditBook(evt) {
         this.booksForm.id = this.selectedBook.id;       
 
-        console.log("Editing!", this.booksOffer);
+        console.log("Editing!", this.booksForm);
 
         fetch('api/books/update.php', {
             method:'POST',

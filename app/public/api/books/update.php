@@ -37,7 +37,7 @@ WHERE id = ?'
 $stmt->execute([
   $_POST['Title'],
   $_POST['Author'],
-  $_POST['Year_published'],
+  $_POST['Year_Published'],
   $_POST['Publisher'],
   $_POST['Page_Count'],
   $_POST['MSRP'],

@@ -9,4 +9,12 @@ https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr?tabs=
 
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli
 
+
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-faq
+
+
+Under docker/ have an env file with the following vars
+MYSQL_USER
+MYSQL_PASSWORD
+MYSQL_DATABASE
+MYSQL_HOST
